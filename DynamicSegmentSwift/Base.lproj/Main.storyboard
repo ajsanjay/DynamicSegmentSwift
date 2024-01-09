@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicSegmentSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input the number of segments needed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-C1-t0b">
+                                <rect key="frame" x="15" y="261.5" width="290" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mQk-kK-uLy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VQQ-hI-n9o"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-VH-dMt" customClass="SubmitStyle" customModule="DynamicSegmentSwift" customModuleProvider="target">
+                                <rect key="frame" x="15" y="321.5" width="290" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.986258980277535" blue="0.0" alpha="0.30623621518920069" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="x6R-vP-P4M"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Create Segments">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input should be Int data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQN-rq-GnZ">
+                                <rect key="frame" x="15" y="261.5" width="290" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.53833256935586737" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5hY-VH-dMt" firstAttribute="top" secondItem="KaN-C1-t0b" secondAttribute="bottom" constant="15" id="3e1-Xs-wq3"/>
+                            <constraint firstItem="KaN-C1-t0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="3hT-Bh-Scm"/>
+                            <constraint firstItem="5hY-VH-dMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="I3f-iY-h38"/>
+                            <constraint firstItem="KaN-C1-t0b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TKd-Lc-ezp"/>
+                            <constraint firstItem="vQN-rq-GnZ" firstAttribute="leading" secondItem="KaN-C1-t0b" secondAttribute="leading" id="Z8k-Rv-G0y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KaN-C1-t0b" secondAttribute="trailing" constant="15" id="bpU-lf-4js"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5hY-VH-dMt" secondAttribute="trailing" constant="15" id="fvj-vT-hQS"/>
+                            <constraint firstItem="vQN-rq-GnZ" firstAttribute="trailing" secondItem="KaN-C1-t0b" secondAttribute="trailing" id="h9N-wO-gad"/>
+                            <constraint firstItem="vQN-rq-GnZ" firstAttribute="bottom" secondItem="KaN-C1-t0b" secondAttribute="bottom" id="mYd-3b-g30"/>
+                            <constraint firstItem="vQN-rq-GnZ" firstAttribute="top" secondItem="KaN-C1-t0b" secondAttribute="top" id="uOY-2b-gZS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createSegment" destination="5hY-VH-dMt" id="TYi-dI-8dg"/>
+                        <outlet property="errorLbl" destination="vQN-rq-GnZ" id="d59-VC-bBR"/>
+                        <outlet property="noOfSegments" destination="KaN-C1-t0b" id="8pc-5A-fMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="3.1690140845070425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
